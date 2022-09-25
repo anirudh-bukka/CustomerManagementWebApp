@@ -18,7 +18,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory;
 	
 	@Override
-//	@Transactional
+//	@Transactional // <-- Since we are manually caling .getCurrentSession() of the sessionFactory, we don't use @Transactional annotation.
 	public List<Customer> getCustomers() {
 		
 		// get the current hibernate session
